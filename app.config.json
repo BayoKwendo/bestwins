@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "BestWin",
+      "script": "npx",
+      "interpreter": "none",
+      "args": "npx serve -s build  -p 3000"
+    }
+  ]
+}
