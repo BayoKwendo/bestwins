@@ -5,9 +5,12 @@ networks:
     external: true
 
 services:
-  # Production: nginx serving the built bundle. Published on 1616 as before.
+  # Production: nginx serving the built bundle.
+  # Container name and port 2342 match the previous portal container, which is
+  # what Kong forwards besna.goldmanlogistics.com to. Stop and remove the old
+  # container before starting this one, or the name and port will clash.
   web_portal:
-    container_name: besn
+    container_name: anguka_portal_besna
     restart: always
     networks:
       - back-tier
@@ -15,4 +18,5 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
+      - "2342:2342"
       - "1616:80"
