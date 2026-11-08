@@ -56,6 +56,10 @@ import { WinnerRetry } from '../../../Users/WinnerRty.jsx'
 import { ROLE } from '../../../../configs/exports.js'
 import AutoWin from '../../../Users/AutoWin.jsx'
 import UserBasket from '../../../Users/UserBasket.jsx'
+import { B2CDetails } from '../../../Users/B2CDetails.jsx'
+import { C2BDetails } from '../../../Users/C2BDetails.jsx'
+import { C2BDetailTable } from '../../../Users/C2BDetailTable.jsx'
+import { B2CDetailTable } from '../../../Users/B2CDetailTable.jsx'
 
 
 
@@ -101,6 +105,10 @@ const validPaths = [
   '/bet_per_hour',
   '/bet_per_day',
   '/avarage_bet',
+  '/b2c_details',
+  '/add_b2c_details',
+  '/c2b_details',
+  '/add_c2b_details',
   '/auto_win',
   '/time_played',
   '/addblacklist',
@@ -116,6 +124,14 @@ export default () => (
       <Route exact path='/find_user' component={UserSearch} />
       <Route exact path='/userdetail' component={UserDetails} />
       <Route exact path='/game' component={Games} />
+
+      {/* API credential pages: admin only. The catch-all route below
+          already sends every other role back to /login. */}
+      <Route exact path='/b2c_details' component={B2CDetailTable} />
+      <Route exact path='/add_b2c_details' component={B2CDetails} />
+
+      <Route exact path='/c2b_details' component={C2BDetailTable} />
+      <Route exact path='/add_c2b_details' component={C2BDetails} />
 
       <Route exact path='/auto_win' component={AutoWin} />
 

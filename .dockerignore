@@ -1,0 +1,21 @@
+# keep the build context small - these are rebuilt inside the image
+node_modules
+build
+build.zip
+build.orig-backup
+
+.git
+.gitignore
+.vscode
+.idea
+.sixth
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+README.md

@@ -1,0 +1,289 @@
+/* Scoped styling for the C2B / B2C details tables.
+   Everything sits under .api-table so no other ReactDatatable in the app is affected. */
+
+.api-table {
+    background: #ffffff;
+    border: 1px solid #eceff5;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ---- "Show N records per page" row ---- */
+
+.api-table .asrt-table-head {
+    margin: 0;
+    padding: 14px 18px;
+    border-bottom: 1px solid #eceff5;
+    background: #fcfcfe;
+}
+
+.api-table .asrt-page-length {
+    align-items: center;
+    width: auto;
+}
+
+.api-table .asrt-page-length .input-group-text {
+    background: transparent;
+    border: 0;
+    padding: 0 10px;
+    font-size: 12px;
+    color: #8a94a6;
+    white-space: nowrap;
+}
+
+.api-table .asrt-page-length select.form-control {
+    height: 32px;
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 74px;
+    padding: 0 26px 0 10px;
+    font-size: 12px;
+    color: #4a5568;
+    border: 1px solid #e2e6ee;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+.api-table .asrt-page-length select.form-control:focus {
+    border-color: #c7d2e5;
+    box-shadow: none;
+}
+
+/* ---- these tables carry a lot of columns, so let the body scroll sideways ---- */
+
+.api-table .asrt-table-body {
+    margin: 0;
+}
+
+.api-table .asrt-table-body > .col-md-12 {
+    padding: 0;
+    overflow-x: auto;
+}
+
+/* ---- the table itself: no vertical rules, just light row separators ---- */
+
+.api-table table {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    border-collapse: collapse;
+}
+
+.api-table table thead th {
+    border: 0 !important;
+    border-bottom: 1px solid #eceff5 !important;
+    padding: 13px 16px;
+    background: #fafbfd;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #8a94a6;
+    white-space: nowrap;
+}
+
+.api-table table thead th.sortable {
+    cursor: pointer;
+}
+
+.api-table table tbody td {
+    border: 0 !important;
+    border-bottom: 1px solid #f3f5f9 !important;
+    padding: 13px 16px;
+    font-size: 13px;
+    color: #4a5568;
+    vertical-align: middle !important;
+    background: transparent;
+    white-space: nowrap;
+}
+
+/* kill the striping that ships with the datatable defaults */
+.api-table table tbody tr,
+.api-table table tbody tr:nth-of-type(odd) {
+    background: transparent;
+}
+
+.api-table table tbody tr:hover td {
+    background: #f8fafc;
+}
+
+.api-table table tbody tr:last-child td {
+    border-bottom: 0 !important;
+}
+
+/* ---- individual columns ---- */
+
+.api-table .api-cell-id {
+    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 12px;
+    color: #a0a8b8;
+}
+
+.api-table .api-name-pill {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: #eef2fb;
+    color: #4a63a8;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.api-table .api-cell-mono {
+    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 12px;
+    color: #62708a;
+}
+
+/* long values (urls, descriptions, keys) stay on one line and trail off */
+.api-table .api-cell-clip {
+    display: inline-block;
+    max-width: 210px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.api-table .api-cell-date {
+    white-space: nowrap;
+    color: #8a94a6;
+    font-size: 12px;
+}
+
+.api-table .api-empty {
+    color: #c3c9d4;
+}
+
+/* ---- row action buttons ---- */
+
+.api-table .api-btn {
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 5px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+    background: #ffffff;
+    transition: all 0.15s ease;
+}
+
+.api-table .api-btn-edit {
+    border-color: #d7e0f2;
+    color: #4a63a8;
+}
+
+.api-table .api-btn-edit:hover {
+    background: #4a63a8;
+    border-color: #4a63a8;
+    color: #ffffff;
+}
+
+.api-table .api-btn-delete {
+    border-color: #f2d7da;
+    color: #c04a55;
+}
+
+.api-table .api-btn-delete:hover {
+    background: #c04a55;
+    border-color: #c04a55;
+    color: #ffffff;
+}
+
+/* ---- empty / loading state ---- */
+
+.api-table table tbody td[colspan] {
+    padding: 34px 18px;
+    text-align: center;
+    color: #9aa3b2;
+    font-size: 13px;
+    background: transparent !important;
+}
+
+/* ---- footer / pagination ---- */
+
+.api-table .asrt-table-foot {
+    margin: 0;
+    padding: 12px 18px;
+    border-top: 1px solid #eceff5;
+    background: #fcfcfe;
+    font-size: 12px;
+    color: #8a94a6;
+}
+
+.api-table .asrt-pagination {
+    margin: 0;
+}
+
+.api-table .asrt-pagination .page-link {
+    margin-left: 6px;
+    border: 1px solid #e2e6ee;
+    border-radius: 6px;
+    padding: 5px 12px;
+    color: #62708a;
+    font-size: 12px;
+    background: #ffffff;
+}
+
+.api-table .asrt-pagination .page-link:hover {
+    background: #f2f5fa;
+    color: #4a63a8;
+}
+
+.api-table .asrt-pagination .active .page-link {
+    background: #4a63a8;
+    border-color: #4a63a8;
+    color: #ffffff;
+}
+
+/* ---- page header above the table ---- */
+
+.api-page-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+}
+
+.api-page-head h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #3f4554;
+}
+
+.api-page-head .api-page-sub {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #9aa3b2;
+}
+
+.api-btn-add {
+    border: 0;
+    border-radius: 6px;
+    padding: 9px 18px;
+    background: #4a63a8;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background 0.15s ease;
+}
+
+.api-btn-add:hover {
+    background: #3d5391;
+    color: #ffffff;
+}
+
+/* "(optional)" next to a form section heading or field label -
+   matches whatever it sits inside rather than standing out */
+.optional-tag {
+    margin-left: 6px;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    color: inherit;
+}

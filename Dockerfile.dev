@@ -1,0 +1,21 @@
+# Development image: CRA dev server with hot reload.
+# Pair it with the bind mount in docker-compose.yml.
+
+FROM node:24-bookworm-slim
+
+WORKDIR /app
+
+# see Dockerfile for why the legacy OpenSSL provider is needed
+ENV NODE_OPTIONS=--openssl-legacy-provider
+# file watching over a bind mount needs polling
+ENV CHOKIDAR_USEPOLLING=true
+ENV WATCHPACK_POLLING=true
+ENV PORT=1616
+
+COPY package.json package-lock.json ./
+RUN npm install --legacy-peer-deps
+
+COPY . .
+
+EXPOSE 1616
+CMD ["npm", "start"]

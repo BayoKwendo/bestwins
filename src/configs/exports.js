@@ -39,6 +39,7 @@ export const ROLE_NAME = localStorage.getItem('role_name');
 
 
 export const CHANNEL = localStorage.getItem('channel');
+export const CHANNELTWO = localStorage.getItem('channeltwo');
 
 // header configurations
 export const CONFIG = {

@@ -108,6 +108,21 @@ const SidebarContent = ({
             onClick={hideSidebar}
           />
 
+          {/* API credentials: admin only */}
+          <SidebarLink
+            title='C2B Details'
+            icon='briefcase'
+            route='/c2b_details'
+            onClick={hideSidebar}
+          />
+
+          <SidebarLink
+            title='B2C Details'
+            icon='briefcase'
+            route='/b2c_details'
+            onClick={hideSidebar}
+          />
+
           <SidebarLink
             title='Withdrawal Retry'
             icon='briefcase'
