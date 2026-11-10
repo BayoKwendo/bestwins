@@ -45,7 +45,7 @@ const MODAL_STYLE = {
 
 const EMPTY_FORM = {
   api_name: '',
-  party_b: '',
+  partyB: '',
   shortcode: '',
   passkey: '',
   stk_callback_url: '',
@@ -80,7 +80,7 @@ export class C2BDetailTable extends React.Component {
             : <span className='api-empty'>&mdash;</span>
       },
       {
-        key: 'party_b',
+        key: 'partyB',
         text: 'Party B',
         className: 'tsc api-cell-mono',
         align: 'left'
@@ -258,7 +258,7 @@ export class C2BDetailTable extends React.Component {
       isEdit: true,
       record_id: record.id,
       api_name: record.api_name || '',
-      party_b: record.party_b || '',
+      partyB: record.partyB || '',
       shortcode: record.shortcode || '',
       passkey: record.passkey || '',
       stk_callback_url: record.stk_callback_url || '',
@@ -281,7 +281,7 @@ export class C2BDetailTable extends React.Component {
 
     const payload = {
       api_name: this.state.api_name,
-      party_b: this.state.party_b,
+      partyB: this.state.partyB,
       shortcode: this.state.shortcode,
       passkey: this.state.passkey,
       stk_callback_url: this.state.stk_callback_url || null,
@@ -554,8 +554,8 @@ export class C2BDetailTable extends React.Component {
                       required
                       className="form-control"
                       placeholder="Enter party B"
-                      value={this.state.party_b}
-                      onChange={(e) => this.setState({ party_b: e.target.value })}
+                      value={this.state.partyB}
+                      onChange={(e) => this.setState({ partyB: e.target.value })}
                     />
                   </div>
 
