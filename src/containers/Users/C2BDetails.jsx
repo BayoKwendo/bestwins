@@ -29,7 +29,7 @@ export class C2BDetails extends React.Component {
       msisdn: '',
       transaction_desc: '',
       partyA: '',
-      partyB: '',
+      party_b: '',
       TransactionType: 'CustomerPayBillOnline',
       b2c_consumer_api: '',
       b2c_secret: '',
@@ -47,7 +47,7 @@ export class C2BDetails extends React.Component {
     e.preventDefault();
 
     const payload = {
-      partyB: this.state.partyB,
+      party_b: this.state.party_b,
       shortcode: this.state.shortcode,
       passkey: this.state.passkey,
       callback: this.state.callback,
@@ -111,8 +111,8 @@ export class C2BDetails extends React.Component {
                               required
                               className="form-control"
                               placeholder="Enter party B"
-                              value={this.state.partyB}
-                              onChange={(e) => this.setState({ partyB: e.target.value })}
+                              value={this.state.party_b}
+                              onChange={(e) => this.setState({ party_b: e.target.value })}
                             />
                           </div>
 

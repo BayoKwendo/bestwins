@@ -29,7 +29,7 @@ CREATE TABLE `c2b_details` (
   `confirmation_url` VARCHAR(500) NULL,
   `validation_url`   VARCHAR(500) NULL,
   `partyA`           VARCHAR(50)  NULL,
-  `partyB`           VARCHAR(50)  NULL,
+  `party_b`          VARCHAR(50)  NULL,
   `json`             JSON         NULL,
   `created_at`       TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at`       TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
