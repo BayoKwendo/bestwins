@@ -19,6 +19,7 @@ export class C2BDetails extends React.Component {
     super(props)
 
     this.state = {
+      party_b: '',
       shortcode: '',
       passkey: '',
       timestamp: moment().format('YYYYMMDDHHmmss'),
@@ -47,6 +48,7 @@ export class C2BDetails extends React.Component {
     e.preventDefault();
 
     const payload = {
+      party_b: this.state.party_b,
       shortcode: this.state.shortcode,
       passkey: this.state.passkey,
       callback: this.state.callback,
@@ -104,6 +106,18 @@ export class C2BDetails extends React.Component {
 
                         <div className="row">
                           <div className="col-md-6 mb-3">
+                            <label className="fw-bold">Party B</label>
+                            <input
+                              type="text"
+                              required
+                              className="form-control"
+                              placeholder="Enter party B"
+                              value={this.state.party_b}
+                              onChange={(e) => this.setState({ party_b: e.target.value })}
+                            />
+                          </div>
+
+                          <div className="col-md-6 mb-3">
                             <label className="fw-bold">Shortcode</label>
                             <input
                               type="text"
@@ -147,6 +161,9 @@ export class C2BDetails extends React.Component {
                             >
                               <option value="CustomerPayBillOnline">
                                 CustomerPayBillOnline
+                              </option>
+                              <option value="CustomerBuyGoodsOnline">
+                                CustomerBuyGoodsOnline
                               </option>
                               <option value="BusinessPayment">
                                 BusinessPayment

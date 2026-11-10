@@ -45,6 +45,7 @@ const MODAL_STYLE = {
 
 const EMPTY_FORM = {
   api_name: '',
+  party_b: '',
   shortcode: '',
   passkey: '',
   stk_callback_url: '',
@@ -77,6 +78,12 @@ export class C2BDetailTable extends React.Component {
           record.api_name
             ? <span className='api-name-pill'>{record.api_name}</span>
             : <span className='api-empty'>&mdash;</span>
+      },
+      {
+        key: 'party_b',
+        text: 'Party B',
+        className: 'tsc api-cell-mono',
+        align: 'left'
       },
       {
         key: 'shortcode',
@@ -251,6 +258,7 @@ export class C2BDetailTable extends React.Component {
       isEdit: true,
       record_id: record.id,
       api_name: record.api_name || '',
+      party_b: record.party_b || '',
       shortcode: record.shortcode || '',
       passkey: record.passkey || '',
       stk_callback_url: record.stk_callback_url || '',
@@ -273,6 +281,7 @@ export class C2BDetailTable extends React.Component {
 
     const payload = {
       api_name: this.state.api_name,
+      party_b: this.state.party_b,
       shortcode: this.state.shortcode,
       passkey: this.state.passkey,
       stk_callback_url: this.state.stk_callback_url || null,
@@ -538,6 +547,17 @@ export class C2BDetailTable extends React.Component {
                       onChange={(e) => this.setState({ api_name: e.target.value })}
                     />
                   </div>
+                  <div className="col-md-6 mb-3">
+                    <label className="fw-bold">Party B</label>
+                    <input
+                      type="text"
+                      required
+                      className="form-control"
+                      placeholder="Enter party B"
+                      value={this.state.party_b}
+                      onChange={(e) => this.setState({ party_b: e.target.value })}
+                    />
+                  </div>
 
                   <div className="col-md-6 mb-3">
                     <label className="fw-bold">Shortcode</label>
@@ -583,6 +603,9 @@ export class C2BDetailTable extends React.Component {
                     >
                       <option value="CustomerPayBillOnline">
                         CustomerPayBillOnline
+                      </option>
+                      <option value="CustomerBuyGoodsOnline">
+                        CustomerBuyGoodsOnline
                       </option>
                       <option value="BusinessPayment">
                         BusinessPayment
