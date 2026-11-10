@@ -108,7 +108,6 @@ export class C2BDetails extends React.Component {
                             <label className="fw-bold">Party B</label>
                             <input
                               type="text"
-                              required
                               className="form-control"
                               placeholder="Enter party B"
                               value={this.state.party_b}
@@ -120,7 +119,6 @@ export class C2BDetails extends React.Component {
                             <label className="fw-bold">Shortcode</label>
                             <input
                               type="text"
-                              required
                               className="form-control"
                               placeholder="Enter shortcode"
                               value={this.state.shortcode}
@@ -132,7 +130,6 @@ export class C2BDetails extends React.Component {
                             <label className="fw-bold">Passkey</label>
                             <input
                               type="password"
-                              required
                               className="form-control"
                               placeholder="Enter passkey"
                               value={this.state.passkey}
@@ -180,7 +177,6 @@ export class C2BDetails extends React.Component {
                             <label className="fw-bold">Transaction Description</label>
                             <textarea
                               rows="3"
-                              required
                               className="form-control"
                               placeholder="Description of transaction"
                               value={this.state.transaction_desc}
@@ -205,7 +201,6 @@ export class C2BDetails extends React.Component {
                             <label className="fw-bold">B2C Consumer API</label>
                             <input
                               type="text"
-                              required
                               className="form-control"
                               placeholder="Consumer Key"
                               value={this.state.b2c_consumer_api}
@@ -221,7 +216,6 @@ export class C2BDetails extends React.Component {
                             <label className="fw-bold">B2C Secret</label>
                             <input
                               type="password"
-                              required
                               className="form-control"
                               placeholder="Consumer Secret"
                               value={this.state.b2c_secret}
@@ -246,7 +240,6 @@ export class C2BDetails extends React.Component {
                             <label className="fw-bold">Callback URL</label>
                             <input
                               type="url"
-                              required
                               className="form-control"
                               placeholder="https://domain.com/callback"
                               value={this.state.callback}
@@ -262,7 +255,6 @@ export class C2BDetails extends React.Component {
                             <label className="fw-bold">Confirmation URL</label>
                             <input
                               type="url"
-                              required
                               className="form-control"
                               placeholder="https://domain.com/confirmation"
                               value={this.state.confirmation_url}
@@ -278,7 +270,6 @@ export class C2BDetails extends React.Component {
                             <label className="fw-bold">Validation URL</label>
                             <input
                               type="url"
-                              required
                               className="form-control"
                               placeholder="https://domain.com/validation"
                               value={this.state.validation_url}

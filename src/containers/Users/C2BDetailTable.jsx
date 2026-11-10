@@ -540,7 +540,6 @@ export class C2BDetailTable extends React.Component {
                     <label className="fw-bold">API Name</label>
                     <input
                       type="text"
-                      required
                       className="form-control"
                       placeholder="e.g. c2b_register_url"
                       value={this.state.api_name}
@@ -551,7 +550,6 @@ export class C2BDetailTable extends React.Component {
                     <label className="fw-bold">Party B</label>
                     <input
                       type="text"
-                      required
                       className="form-control"
                       placeholder="Enter party B"
                       value={this.state.party_b}
@@ -563,7 +561,6 @@ export class C2BDetailTable extends React.Component {
                     <label className="fw-bold">Shortcode</label>
                     <input
                       type="text"
-                      required
                       className="form-control"
                       placeholder="Enter shortcode"
                       value={this.state.shortcode}
@@ -575,7 +572,6 @@ export class C2BDetailTable extends React.Component {
                     <label className="fw-bold">Passkey</label>
                     <input
                       type="password"
-                      required
                       className="form-control"
                       placeholder="Enter passkey"
                       value={this.state.passkey}
@@ -647,7 +643,6 @@ export class C2BDetailTable extends React.Component {
                     <label className="fw-bold">Consumer Key</label>
                     <input
                       type="text"
-                      required
                       className="form-control"
                       placeholder="Consumer Key"
                       value={this.state.c2b_consumer}
@@ -663,7 +658,6 @@ export class C2BDetailTable extends React.Component {
                     <label className="fw-bold">Consumer Secret</label>
                     <input
                       type="password"
-                      required
                       className="form-control"
                       placeholder="Consumer Secret"
                       value={this.state.c2b_secret}
